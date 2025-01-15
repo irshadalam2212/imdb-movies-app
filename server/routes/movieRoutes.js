@@ -1,0 +1,13 @@
+const express = require('express');
+const moviesController = require('../controllers/moviesController');
+const movieController = require('../controllers/movieController');
+const verifyToken = require('../middleware/auth');
+
+const router = express.Router();
+
+// Define API routes
+router.get('/top250', moviesController.getTop250Movies);
+router.get('/:id', movieController.getMovieById);
+router.post('/:id/reviews', movieController.addReview);
+
+module.exports = router;

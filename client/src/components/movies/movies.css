@@ -1,0 +1,125 @@
+.movies-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.movies-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 4rem;
+    padding: 2rem;
+}
+
+.movies-heading h1 {
+    margin-bottom: 1rem;
+    font-size: 48px;
+}  
+
+.movies-heading hr {
+    width: 35vw;
+    border: 0.1rem solid var(--secondary-color);
+}
+
+.movies-heading p {
+    margin-top: 2rem;
+    max-width: 100%; /* Ensure the width does not exceed the viewport */
+    width: 50vw; /* Adjust this value to your liking */
+    font-size: 1.4vw;
+    overflow-wrap: break-word; /* Break words to prevent overflow */
+}
+
+.movies-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+    padding: 1rem 5rem;
+}
+
+.search-filter {
+    display: flex;
+    padding: 5rem;
+    gap: 1rem;
+}
+
+.search-filter input {
+    height: 2.5vh;
+    width: 25vw;
+    padding: 1rem;
+    font-size: 20px;
+    border-radius: 0.5rem;
+    border-style: none;
+    outline: none;
+    box-shadow: 0 0 0.5rem var(--primary-color);
+}
+
+.search-filter select {
+    padding: 1rem;
+    font-size: 20px;
+    border-radius: 0.5rem;
+    border-style: none;
+    outline: none;
+    box-shadow: 0 0 0.5rem var(--primary-color);
+}
+  
+.card {
+    background-color: var(--secondary-background-color);
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    gap: 5rem;
+    box-shadow: 0 0 2rem var(--primary-color);
+}
+
+.movie-data h2, .card p {
+    padding: 0.5rem;
+}
+
+.movie-data h2 {
+    font-size: 36px;
+}
+
+.movie-data p {
+    font-size: 20px; 
+}
+
+.movie-data hr {
+    width: 100%;
+    border: 0.1rem solid var(--secondary-color);
+
+}
+
+.movie-image img {
+    height: 25vh;
+    border-radius: 0.5rem;
+}
+
+.movie-image img:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+@keyframes slideInFromBottom {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .card.animate {
+    animation: slideInFromBottom 1s ease-in;
+  }
+
+@media screen and (max-width: 2160px) {
+    .movies-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -1,0 +1,47 @@
+.container {
+    background-color: var(--primary-color);
+}
+
+.container ul {
+    display: flex;
+    list-style: none;
+    padding: 2rem;
+    gap: 5rem;
+}
+
+.container a {
+    color: var(--primary-background-color);
+    text-decoration: none;
+    font-size: 1.7vw;
+    padding: 0 2rem;
+}
+
+.container nav ul {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.container nav ul li:last-child {
+    margin-left: auto;
+}
+
+.container button {
+    background-color: var(--secondary-background-color);
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    color: var(--primary-background-color);
+    font-size: 18px;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.container button:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.container a:hover {
+    color: var(--secondary-color);
+}
